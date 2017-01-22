@@ -40,7 +40,7 @@ public class ServProfesionales {
 	@UnitOfWork
 	@Path("/profesional/{id}")
 	public Profesional findById(@PathParam("id") LongParam id) {
-		return dao.getById(id.get());
+		return dao.get(id.get());
 	}
 
 	@GET
@@ -48,7 +48,7 @@ public class ServProfesionales {
 	@UnitOfWork
 	@Path("/profesionales")
 	public List<Profesional> getAllNotPaged() {
-		return dao.get();
+		return dao.getAll();
 	}
 
 	@POST

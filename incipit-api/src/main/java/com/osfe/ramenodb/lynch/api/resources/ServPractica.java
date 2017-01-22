@@ -45,7 +45,7 @@ public class ServPractica {
 	@UnitOfWork
 	@Path("/practica/{id}")
 	public Practica findById(@PathParam("id") LongParam id) {
-		return dao.getById(id.get());
+		return dao.get(id.get());
 	}
 
 	@GET
@@ -53,7 +53,7 @@ public class ServPractica {
 	@UnitOfWork
 	@Path("/practicas")
 	public List<Practica> getAllNotPaged() {
-		return dao.get();
+		return dao.getAll();
 	}
 
 	@POST

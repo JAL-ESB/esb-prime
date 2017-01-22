@@ -38,14 +38,14 @@ public class ServVisita {
 	@UnitOfWork
 	@Path("/visita/{id}")
 	public Visita findById(@PathParam("id") LongParam id) {
-		return dao.getById(id.get());
+		return dao.get(id.get());
 	}
 
 	@GET
 	@UnitOfWork
 	@Path("/visitas")
 	public List<Visita> getAllNotPaged() {
-		return dao.get();
+		return dao.getAll();
 	}
 
 	@POST

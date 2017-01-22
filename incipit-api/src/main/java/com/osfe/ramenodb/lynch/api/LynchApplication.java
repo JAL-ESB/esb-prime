@@ -13,6 +13,7 @@ import com.osfe.ramenodb.lynch.api.auth.SimpleAuthenticator;
 import com.osfe.ramenodb.lynch.api.core.User;
 import com.osfe.ramenodb.lynch.api.db.RepoEspecialidad;
 import com.osfe.ramenodb.lynch.api.db.RepoPractica;
+import com.osfe.ramenodb.lynch.api.db.RepoUser;
 import com.osfe.ramenodb.lynch.api.db.RepoProfesional;
 import com.osfe.ramenodb.lynch.api.db.RepoVisita;
 import com.osfe.ramenodb.lynch.api.model.Especialidad;
@@ -96,7 +97,8 @@ public class LynchApplication extends Application<LynchConfiguration> {
 		final RepoPendiente repocarga = new RepoPendiente(hibernateMySQL.getSessionFactory());
 		final RepoReporte repoReporte = new RepoReporte(hibernateMySQL.getSessionFactory());
 		final RepoPractica repoPractica = new RepoPractica((hibernateMySQL.getSessionFactory()));
-
+		final RepoUser dao = new RepoUser((hibernateMySQL.getSessionFactory()));
+		
 		environment.jersey().register(new ServVisita(repoVisita));
 		environment.jersey().register(new ServProfesionales(repoProfesional));
 		environment.jersey().register(new ServEspecialidad(repoEspecialidad));
@@ -106,7 +108,7 @@ public class LynchApplication extends Application<LynchConfiguration> {
 		environment.jersey().register(new ServPractica(repoPractica));
 
 		environment.jersey()
-				.register(AuthFactory.binder(new OAuthFactory<User>(new SimpleAuthenticator(), "bearer", User.class)));
+				.register(AuthFactory.binder(new OAuthFactory<User>(new SimpleAuthenticator(dao), "bearer", User.class)));
 
 		FilterRegistration.Dynamic filter = environment.servlets().addFilter("CORSFilter", CrossOriginFilter.class);
 		filter.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST), true,

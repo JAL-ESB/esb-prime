@@ -54,7 +54,7 @@ databaseAuth:
   properties:
     charSet: UTF-8
     hibernate.dialect: org.hibernate.dialect.MySQLDialect
-    hibernate.hbm2ddl.auto: create
+    hibernate.hbm2ddl.auto: update
     hibernate.generate_statistics: true
     hibernate.show_sql: true
     hibernate.format_sql: true
@@ -76,7 +76,7 @@ databaseSQLServer:
   properties:
     charSet: UTF-8
     hibernate.dialect: org.hibernate.dialect.MySQLDialect
-    hibernate.hbm2ddl.auto: create
+    hibernate.hbm2ddl.auto: update
     hibernate.generate_statistics: true
     hibernate.show_sql: true
     hibernate.format_sql: true

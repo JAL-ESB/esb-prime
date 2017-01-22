@@ -40,7 +40,7 @@ public class ServEspecialidad {
 	@UnitOfWork
 	@Path("/especialidad/{id}")
 	public Especialidad findById(@PathParam("id") LongParam id) {
-		return dao.getById(id.get());
+		return dao.get(id.get());
 	}
 
 	@GET
@@ -48,7 +48,7 @@ public class ServEspecialidad {
 	@UnitOfWork
 	@Path("/especialidades")
 	public List<Especialidad> getAllNotPaged() {
-		return dao.get();
+		return dao.getAll();
 	}
 
 	@POST

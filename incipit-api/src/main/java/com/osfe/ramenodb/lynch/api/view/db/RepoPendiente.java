@@ -29,7 +29,7 @@ public class RepoPendiente extends GenericRepo<Pendiente, Serializable> {
 				.createSQLQuery("select " + "v.id id, " + "v.afiliado_apellido afiliadoApellido, "
 						+ "v.afiliado_nombre afiliadoNombre, " + "v.afiliado_numero afiliadoNumero, "
 						+ "e.descripcion especialidad, " + "p.nombre_completo nombreProfesional "
-						+ "from lynch.visita v " + "inner join especialidad e on e.id=v.id_especialidad "
+						+ "from incipit.visita v " + "inner join especialidad e on e.id=v.id_especialidad "
 						+ "inner join profesional p on p.id=v.id_profesional " + "where v.estado= " + 0)
 				.setResultSetMapping("cargaMapping").list();
 		return cargas;

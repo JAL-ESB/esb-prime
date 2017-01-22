@@ -32,14 +32,14 @@ public class RepoReporte extends GenericRepo<Reporte, Serializable> {
 						+ " li.descripcion 	      descripcionLinea,"
 						+ " pro.nombre_completo       descripcionProfesional," + " v.estado, "
 						+ " cie.descripcion       descripcionCIE10," + " dsmiv.descripcion     descripcionDSMIV,"
-						+ " nom.descripcion       descripcionNomenclador," + " v.observacion" + " FROM lynch.visita v"
-						+ " inner join lynch.practica 			p on p.id_visita=v.id"
+						+ " nom.descripcion       descripcionNomenclador," + " v.observacion" + " FROM incipit.visita v"
+						+ " inner join incipit.practica 			p on p.id_visita=v.id"
 						+ " left join generalmysql.cie10        cie   on   cie.id=p.id_Cie10"
 						+ " left join generalmysql.dsmiv        dsmiv on   dsmiv.id=p.id_dsmiv"
 						+ " inner join generalmysql.nomenclador  nom   on   nom.id=p.id_nomenclador"
 						+ " inner join generalmysql.linea        li    on   li.id=v.id_linea"
-						+ " inner join lynch.especialidad        esp   on   esp.id=v.id_especialidad"
-						+ " inner join lynch.profesional         pro   on   pro.id=v.id_profesional ")
+						+ " inner join incipit.especialidad        esp   on   esp.id=v.id_especialidad"
+						+ " inner join incipit.profesional         pro   on   pro.id=v.id_profesional ")
 				.setResultSetMapping("reporteMApping").list();
 		return reporte;
 	}
@@ -52,14 +52,14 @@ public class RepoReporte extends GenericRepo<Reporte, Serializable> {
 				+ " esp.descripcion       descripcionEspecialidad," + " li.descripcion 	      descripcionLinea,"
 				+ " pro.nombre_completo       descripcionProfesional," + " v.estado, "
 				+ " cie.descripcion       descripcionCIE10," + " dsmiv.descripcion     descripcionDSMIV,"
-				+ " nom.descripcion       descripcionNomenclador," + " v.observacion" + " FROM lynch.visita v"
-				+ " inner join lynch.practica 			p on p.id_visita=v.id"
+				+ " nom.descripcion       descripcionNomenclador," + " v.observacion" + " FROM incipit.visita v"
+				+ " inner join incipit.practica 			p on p.id_visita=v.id"
 				+ " left join generalmysql.cie10        cie   on   cie.id=p.id_Cie10"
 				+ " left join generalmysql.dsmiv        dsmiv on   dsmiv.id=p.id_dsmiv"
 				+ " inner join generalmysql.nomenclador  nom   on   nom.id=p.id_nomenclador"
 				+ " inner join generalmysql.linea        li    on   li.id=v.id_linea"
-				+ " inner join lynch.especialidad        esp   on   esp.id=v.id_especialidad"
-				+ " inner join lynch.profesional         pro   on   pro.id=v.id_profesional "
+				+ " inner join incipit.especialidad        esp   on   esp.id=v.id_especialidad"
+				+ " inner join incipit.profesional         pro   on   pro.id=v.id_profesional "
 				+ " WHERE v.id_profesional = " + id).setResultSetMapping("reporteMApping").list();
 		return reporte;
 	}
@@ -72,14 +72,14 @@ public class RepoReporte extends GenericRepo<Reporte, Serializable> {
 				+ " esp.descripcion       descripcionEspecialidad," + " li.descripcion 	      descripcionLinea,"
 				+ " pro.nombre_completo       descripcionProfesional," + " v.estado, "
 				+ " cie.descripcion       descripcionCIE10," + " dsmiv.descripcion     descripcionDSMIV,"
-				+ " nom.descripcion       descripcionNomenclador," + " v.observacion" + " FROM lynch.visita v"
-				+ " inner join lynch.practica 			p on p.id_visita=v.id"
+				+ " nom.descripcion       descripcionNomenclador," + " v.observacion" + " FROM incipit.visita v"
+				+ " inner join incipit.practica 			p on p.id_visita=v.id"
 				+ " left join generalmysql.cie10        cie   on   cie.id=p.id_Cie10"
 				+ " left join generalmysql.dsmiv        dsmiv on   dsmiv.id=p.id_dsmiv"
 				+ " inner join generalmysql.nomenclador  nom   on   nom.id=p.id_nomenclador"
 				+ " inner join generalmysql.linea        li    on   li.id=v.id_linea"
-				+ " inner join lynch.especialidad        esp   on   esp.id=v.id_especialidad"
-				+ " inner join lynch.profesional         pro   on   pro.id=v.id_profesional "
+				+ " inner join incipit.especialidad        esp   on   esp.id=v.id_especialidad"
+				+ " inner join incipit.profesional         pro   on   pro.id=v.id_profesional "
 				+ " WHERE v.id_especialidad = " + id).setResultSetMapping("reporteMApping").list();
 		return reporte;
 	}
@@ -92,14 +92,14 @@ public class RepoReporte extends GenericRepo<Reporte, Serializable> {
 				+ " esp.descripcion       descripcionEspecialidad," + " li.descripcion 	      descripcionLinea,"
 				+ " pro.nombre_completo       descripcionProfesional," + " v.estado, "
 				+ " cie.descripcion       descripcionCIE10," + " dsmiv.descripcion     descripcionDSMIV,"
-				+ " nom.descripcion       descripcionNomenclador," + " v.observacion" + " FROM lynch.visita v"
-				+ " inner join lynch.practica 			p on p.id_visita=v.id"
+				+ " nom.descripcion       descripcionNomenclador," + " v.observacion" + " FROM incipit.visita v"
+				+ " inner join incipit.practica 			p on p.id_visita=v.id"
 				+ " left join generalmysql.cie10        cie   on   cie.id=p.id_Cie10"
 				+ " left join generalmysql.dsmiv        dsmiv on   dsmiv.id=p.id_dsmiv"
 				+ " inner join generalmysql.nomenclador  nom   on   nom.id=p.id_nomenclador"
 				+ " inner join generalmysql.linea        li    on   li.id=v.id_linea"
-				+ " inner join lynch.especialidad        esp   on   esp.id=v.id_especialidad"
-				+ " inner join lynch.profesional         pro   on   pro.id=v.id_profesional "
+				+ " inner join incipit.especialidad        esp   on   esp.id=v.id_especialidad"
+				+ " inner join incipit.profesional         pro   on   pro.id=v.id_profesional "
 				+ " WHERE v.afiliado_dni = " + id).setResultSetMapping("reporteMApping").list();
 		return reporte;
 	}
@@ -113,14 +113,14 @@ public class RepoReporte extends GenericRepo<Reporte, Serializable> {
 						+ " li.descripcion 	      descripcionLinea,"
 						+ " pro.nombre_completo       descripcionProfesional," + " v.estado, "
 						+ " cie.descripcion       descripcionCIE10," + " dsmiv.descripcion     descripcionDSMIV,"
-						+ " nom.descripcion       descripcionNomenclador," + " v.observacion" + " FROM lynch.visita v"
-						+ " inner join lynch.practica 			p on p.id_visita=v.id"
+						+ " nom.descripcion       descripcionNomenclador," + " v.observacion" + " FROM incipit.visita v"
+						+ " inner join incipit.practica 			p on p.id_visita=v.id"
 						+ " left join generalmysql.cie10        cie   on   cie.id=p.id_Cie10"
 						+ " left join generalmysql.dsmiv        dsmiv on   dsmiv.id=p.id_dsmiv"
 						+ " inner join generalmysql.nomenclador  nom   on   nom.id=p.id_nomenclador"
 						+ " inner join generalmysql.linea        li    on   li.id=v.id_linea"
-						+ " inner join lynch.especialidad        esp   on   esp.id=v.id_especialidad"
-						+ " inner join lynch.profesional         pro   on   pro.id=v.id_profesional "
+						+ " inner join incipit.especialidad        esp   on   esp.id=v.id_especialidad"
+						+ " inner join incipit.profesional         pro   on   pro.id=v.id_profesional "
 						+ " WHERE fecha BETWEEN  \'" + desde + "\' AND \'" + hasta + "\'")
 				.setResultSetMapping("reporteMApping").list();
 		return reporte;
