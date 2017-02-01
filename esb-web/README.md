@@ -19,7 +19,7 @@ Fully functional web app with webpack and angular integrated with Jquery and boo
   * modificar el archivo /etc/apache2/sites-available -> "DocumentRoot /var/www/(**distName**)"
 3. ejecutar el comando -> npm install para bajar las dependencias (sobre el directorio root de la app)
 4. ejecutar el comando ->npm run build para compilar la app (sobre el directorio root de la app)
-5. copiar la carpeta con la compilacion al servidor ejecutando el comando -> cp -avr (ruta al proyecto)/dist /var/www/_distName_**
+5. copiar la carpeta con la compilacion al servidor ejecutando el comando -> cp -avr (ruta al proyecto)/dist /var/www/(**distName**)
 4. levantar el servidor apache ejecutar el comando -> /etc/init.d/apache2 start 
 
 -- La aplicacion estara disponible en http://localhost --
