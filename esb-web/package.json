@@ -1,7 +1,7 @@
 {
-  "name": "angular-webpack-workflow",
-  "version": "1.1.0",
-  "description": "A workflow for Angular made with Webpack",
+  "name": "esb-web",
+  "version": "0.9.0",
+  "description": "an angular & webpack web app",
   "scripts": {
     "build": "rimraf dist && webpack --bail --progress --profile",
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
@@ -11,14 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Foxandxss/angular-webpack-workflow.git"
+    "url": "https://github.com/JAL-ESB/esb-prime.git"
   },
-  "author": "Jesus Rodriguez",
+  "author": "Jose Maria Fabiano",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Foxandxss/angular-webpack-workflow/issues"
   },
-  "homepage": "https://github.com/Foxandxss/angular-webpack-workflow",
+  "homepage": "https://github.com/JAL-ESB/esb-prime",
   "dependencies": {
     "angular": "^1.5.0",
     "angular-ui-router": "^0.4.2",
