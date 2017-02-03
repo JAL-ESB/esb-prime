@@ -11,6 +11,7 @@ import fSize3 from './img/portfolio/fullsize/3.jpg';
 import fSize4 from './img/portfolio/fullsize/4.jpg';
 import fSize5 from './img/portfolio/fullsize/5.jpg';
 import fSize6 from './img/portfolio/fullsize/6.jpg';
+import logo from './img/logo.png';
 
 import designBehavior from './designBehavior';
 
@@ -19,6 +20,7 @@ export default class HomeController {
   constructor() {
     this.imgThumb = [thumb1,thumb2,thumb3,thumb4,thumb5,thumb6];
     this.imgFSize = [fSize1,fSize2,fSize3,fSize4,fSize5,fSize6];
+    this.logo = logo;
     designBehavior(); 
   }
 
